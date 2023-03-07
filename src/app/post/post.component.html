@@ -1,0 +1,43 @@
+
+
+<div id="cards-area">
+    <mat-card id="post-entry-card">
+        <div style="margin-bottom: 15px;">
+            <mat-card-header>
+                <mat-card-title>
+                  Add a post
+                </mat-card-title>
+              </mat-card-header>
+        </div>
+        
+        <mat-card-content id="entry-card-content">
+            <div width="100%">
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <textarea id="text-area" style=" width:100%;" matInput [(ngModel)]="myProperty"></textarea>
+                </mat-form-field>
+                
+            </div>
+         <div id="submit-button-area">
+            <button id="submit-button" mat-raised-button (click)="onSubmit()">submit</button>
+         </div>
+          
+        </mat-card-content>
+        
+      </mat-card>
+      <mat-card id="posts-history">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Post {{postCount}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-panel-title>
+            </mat-panel-title>
+               
+                  <mat-panel-title  *ngFor="let post of posts">
+                    {{posts}}
+                  </mat-panel-title>
+               
+        </mat-expansion-panel>
+      </mat-card>
+</div>
